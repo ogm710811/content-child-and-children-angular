@@ -1,0 +1,23 @@
+ <div>
+  <form (ngSubmit)="onSubmit(form.value)" #form="ngForm">
+    <ng-content select='h3'></ng-content>
+    <label>
+      Email address
+      <input type="email" name="email" ngModel>
+    </label>
+    <label>
+      Password
+      <input type="password" name="password" ngModel>
+    </label>
+    <ng-content select='app-auth-remember'></ng-content>
+    <!-- 
+      Also you can call the class
+      select='.remember'
+      or
+      you can call an id
+      select='#remember'
+    
+    -->
+    <ng-content select='button'></ng-content>
+  </form>
+</div>
