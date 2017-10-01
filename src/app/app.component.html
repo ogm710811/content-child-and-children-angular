@@ -9,10 +9,10 @@
   <app-auth-form 
     (submitted)="loginUser($event)">
     <h3>Login</h3>
-
-    <app-auth-remember
-      (checked)="rememberUser($event)"
-    ></app-auth-remember>
+    <!-- this component is repeated only for demostrate ContentChildren query -->
+    <app-auth-remember (checked)="rememberUser($event)"></app-auth-remember>
+    <app-auth-remember (checked)="rememberUser($event)"></app-auth-remember>
+    <app-auth-remember (checked)="rememberUser($event)"></app-auth-remember>
 
     <button type="submit">
       Login
